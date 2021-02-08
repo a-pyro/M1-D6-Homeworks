@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>D6 Dom Manipulation</title>
+    <style>
+      body {
+        background: #557174;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+      }
+      h1 {
+        letter-spacing: 10px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 0.5rem;
+      }
+      .spacer {
+        height: 10px;
+      }
+      .btn {
+        color: #c7cfb7;
+        background-color: #557174;
+        border: 1px solid #c7cfb7;
+        text-decoration: none;
+        padding: 5px 15px;
+        border-radius: 8px;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #c7cfb7;
+        color: #557174;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+
+      form {
+        float: left;
+      }
+      textarea {
+        display: block;
+        margin-bottom: 0.6rem;
+        border-radius: 8px;
+      }
+
+      textarea:focus {
+        outline: none;
+      }
+
+      .me {
+        margin-right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- EX1.: Add H1 title with the name of the shop -->
+      <header><h1 class="text-center">RoboShop</h1></header>
+      <!-- EX2.: Add a TABLE with the top 5 products of the shop -->
+      <main>
+        <table>
+          <tr class="names">
+            <th>Jerry</th>
+            <th>Sally</th>
+            <th>Lauren</th>
+            <th>Morty</th>
+            <th>Rick</th>
+          </tr>
+          <tr class="spacer"></tr>
+          <tr class="pics">
+            <td><img src="https://robohash.org/jerry" alt="happy-robot" /></td>
+            <td><img src="https://robohash.org/sally" alt="happy-robot" /></td>
+            <td><img src="https://robohash.org/lauren" alt="happy-robot" /></td>
+            <td>
+              <img src="https://robohash.org/rick1244" alt="happy-robot" />
+            </td>
+            <td>
+              <img src="https://robohash.org/morty3443" alt="happy-robot" />
+            </td>
+          </tr>
+          <tr class="spacer"></tr>
+
+          <tr>
+            <td colspan="5" class>Skills</td>
+          </tr>
+          <tr class="spacer"></tr>
+
+          <!-- skills -->
+          <tr class="skills">
+            <td>The greatest cook of Roboland</td>
+            <td>A very skilled gardener</td>
+            <td>She can repair all your other broken tech</td>
+            <td>He usually breaks all the tech Lauren repairs</td>
+            <td>The perfect antenna for your old TV</td>
+          </tr>
+          <tr class="spacer"></tr>
+
+          <tr>
+            <td colspan="5" class>Price</td>
+          </tr>
+
+          <tr class="spacer"></tr>
+
+          <!-- price -->
+          <tr class="prices">
+            <td>199$</td>
+            <td>149$</td>
+            <td>299$</td>
+            <td>999$</td>
+            <td>1$</td>
+          </tr>
+          <tr class="spacer"></tr>
+
+          <tr class="buy">
+            <td><a class="btn" href="#">Buy Me!</a></td>
+            <td><a class="btn" href="#">Buy Me!</a></td>
+            <td><a class="btn" href="#">Buy Me!</a></td>
+            <td><a class="btn" href="#">Buy Me!</a></td>
+            <td><a class="btn" href="#">Buy Me!</a></td>
+          </tr>
+        </table>
+      </main>
+
+      <!-- EX3.: Each product should have one image, title, description and price -->
+
+      <!-- EX4.: Add the links to Amazon products for each item in the table -->
+
+      <!-- EX5.: Add a footer with the address and the name of the shop -->
+
+      <!-- EX6.: Add a message board where the user can type a message in it -->
+      <div class="spacer"></div>
+
+      <!-- form -->
+      <form>
+        <textarea id="textArea" name="textarea" cols="30" rows="10"></textarea>
+        <label for="textarea">Leavea message!</label>
+        <a href="#" class="btn">Send</a>
+      </form>
+      <div class="spacer"></div>
+
+      <!-- for dinamic js -->
+      <section id="jsPlayground"></section>
+
+      <div class="spacer"></div>
+
+      <footer>
+        <p>RoboShop, 5th Avenue NY Underground City</p>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
