@@ -16,6 +16,7 @@
         color: #fff;
         font-family: 'Roboto', sans-serif;
         text-align: center;
+        transition: background-color 0.5s ease-in-out;
       }
       * {
         box-sizing: border-box;
@@ -30,6 +31,7 @@
 
       img {
         width: 100%;
+        transition: all 0.5s ease-in-out;
       }
 
       th,
@@ -54,16 +56,19 @@
         color: #557174;
       }
       footer {
-        position: fixed;
-        bottom: 0;
         width: 100%;
         text-align: center;
         font-size: 0.8rem;
       }
-
+      /* 
       form {
         float: left;
       }
+
+      .clear-fix {
+        clear: both;
+      } */
+
       textarea {
         display: block;
         margin-bottom: 0.6rem;
@@ -76,6 +81,26 @@
 
       .me {
         margin-right: 0.5rem;
+      }
+
+      #formAndJs {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .bigger {
+        transform: scale(1.5);
+        transition: all 0.5s ease-in-out;
+      }
+
+      #jsPlayground > a {
+        margin-bottom: 0.5rem;
+      }
+
+      .hide {
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
       }
     </style>
   </head>
@@ -158,16 +183,20 @@
       <div class="spacer"></div>
 
       <!-- form -->
-      <form>
-        <textarea id="textArea" name="textarea" cols="30" rows="10"></textarea>
-        <label for="textarea">Leavea message!</label>
-        <a href="#" class="btn">Send</a>
-      </form>
-      <div class="spacer"></div>
-
-      <!-- for dinamic js -->
-      <section id="jsPlayground"></section>
-
+      <section id="formAndJs">
+        <form>
+          <textarea
+            id="textArea"
+            name="textarea"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <a href="#" class="btn">Send</a>
+          <label for="textarea">Leavea message!</label>
+        </form>
+        <!-- for dinamic js -->
+        <section id="jsPlayground"></section>
+      </section>
       <div class="spacer"></div>
 
       <footer>
